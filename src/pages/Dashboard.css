@@ -1,0 +1,109 @@
+/* src/pages/Dashboard.css */
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Add/modify these styles in src/pages/Dashboard.css */
+
+.dashboard-header {
+  display: flex; /* This is the key! */
+  justify-content: space-between; /* Pushes items to opposite ends */
+  align-items: center; /* Vertically aligns them */
+  margin-bottom: 3rem;
+}
+
+.welcome-message h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.welcome-message span {
+  font-size: 1rem;
+  color: #a7b3c2;
+}
+
+.logout-btn {
+  background-color: #3a414a;
+  color: #f0f0f0;
+}
+.logout-btn:hover {
+  background-color: #4a515e;
+}
+
+/* --- Main Content & Sections --- */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #3a414a;
+  padding-bottom: 0.5rem;
+}
+
+/* --- The Grid System for Cards --- */
+.document-grid {
+  display: grid;
+  /* This creates a responsive grid that fits as many columns as possible */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* --- Card Styles --- */
+.document-card, .add-new-card {
+  background-color: #24282e;
+  border: 1px solid #3a414a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.document-card:hover, .add-new-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+}
+
+.card-title {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card-meta {
+  font-size: 0.8rem;
+  color: #a7b3c2;
+  margin: 0;
+}
+
+/* --- Special "Add New" Card --- */
+.add-new-card {
+  border: 2px dashed #4a515e;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.add-new-card:hover {
+  border-color: #5a67d8;
+  color: #5a67d8;
+}
+
+.add-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.add-new-card p {
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+}

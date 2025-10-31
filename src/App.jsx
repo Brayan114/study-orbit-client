@@ -1,35 +1,38 @@
 // src/App.jsx
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import './App.css'; // We'll use this for styling later
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
+import ProtectedRoute from './components/ProtectedRoute';
+// Import our new Layout component
+import Layout from './components/Layout';
 
-// Import the page components you created
+// Import the page components
 import Welcome from './pages/Welcome';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 
+// src/App.jsx
+// ... imports
+
 function App() {
   return (
     <BrowserRouter>
-      {/* A simple navigation bar */}
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Sign Up</Link>
-        <Link to="/dashboard">Dashboard</Link>
-      </nav>
+      <Routes>
+        {/* Standalone Pages */}
+        <Route path="/" element={<Welcome />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
 
-      <main>
-        <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+        {/* Protected Standalone Pages */}
+        <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
-      </main>
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }
+
+
 
 export default App;

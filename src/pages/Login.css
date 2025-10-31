@@ -1,0 +1,16 @@
+/* src/pages/Login.css */
+/* You can copy the content from Signup.css directly here */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.auth-card {
+  /* ... all the other styles */
+}
+
+/* ... etc. */

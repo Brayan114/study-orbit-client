@@ -1,0 +1,44 @@
+/* src/pages/Welcome.css */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* This makes it take up the full screen height */
+  padding: 2rem;
+}
+
+.logo-placeholder {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-subtitle {
+  font-size: 1.25rem;
+  color: #a7b3c2; /* A softer color for the subtitle */
+  margin-bottom: 2.5rem;
+}
+
+.get-started-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4c51bf;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.get-started-btn:hover {
+  background-color: #5a67d8;
+  transform: scale(1.05); /* A subtle zoom effect on hover */
+}
